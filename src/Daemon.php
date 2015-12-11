@@ -1,6 +1,6 @@
 <?php
 
-namespace messyOne\Daemon;
+namespace messyOne;
 
 use Exception;
 use Psr\Log\LoggerInterface;

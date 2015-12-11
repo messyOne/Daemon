@@ -1,6 +1,6 @@
 <?php
 
-namespace messyOne\Daemon;
+namespace messyOne;
 
 /**
  * TaskHandler gets the arguments from the due task injected and handles the task.

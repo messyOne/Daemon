@@ -1,6 +1,6 @@
 <?php
 
-namespace messyOne\Daemon;
+namespace messyOne;
 
 /**
  * Persists the task or remove it.
