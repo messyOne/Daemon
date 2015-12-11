@@ -1,7 +1,7 @@
 {
     "name": "messyOne/daemon",
     "description": "Simple PHP daemon which handles tasks",
-    "homepage": "https://github.com/messyOne/daemon",
+    "homepage": "https://github.com/messyOne/Daemon",
     "type": "library",
     "license": "Apache-2.0",
     "authors": [
