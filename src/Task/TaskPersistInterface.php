@@ -1,6 +1,6 @@
 <?php
 
-namespace messyOne;
+namespace messyOne\Task;
 
 /**
  * Persists the task or remove it.

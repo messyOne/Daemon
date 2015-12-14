@@ -1,6 +1,6 @@
 <?php
 
-namespace messyOne;
+namespace messyOne\Task;
 
 /**
  * Represents a task object.

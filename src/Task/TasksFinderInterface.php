@@ -1,6 +1,6 @@
 <?php
 
-namespace messyOne;
+namespace messyOne\Task;
 
 /**
  * Find all due tasks.

@@ -3,6 +3,9 @@
 namespace messyOne;
 
 use Exception;
+use messyOne\Task\TaskHandlerInterface;
+use messyOne\Task\TaskPersistInterface;
+use messyOne\Task\TasksFinderInterface;
 use Psr\Log\LoggerInterface;
 
 /**
