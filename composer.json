@@ -1,5 +1,5 @@
 {
-    "name": "messyOne/daemon",
+    "name": "messy-one/daemon",
     "description": "Simple PHP daemon which handles tasks",
     "homepage": "https://github.com/messyOne/Daemon",
     "type": "library",
