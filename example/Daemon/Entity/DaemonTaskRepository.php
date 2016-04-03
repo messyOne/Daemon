@@ -44,6 +44,7 @@ class DaemonTaskRepository extends EntityRepository
         $rsm->addFieldResult('dt', 'handler_class', 'handlerClass');
         $rsm->addFieldResult('dt', 'arguments', 'arguments');
         $rsm->addFieldResult('dt', 'disabled', 'disabled');
+        $rsm->addFieldResult('dt', 'reoccur_interval', 'reoccurInterval');
 
         return $rsm;
     }
