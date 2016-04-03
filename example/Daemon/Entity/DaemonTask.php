@@ -54,6 +54,13 @@ class DaemonTask implements TaskInterface
     protected $disabled = false;
 
     /**
+     * @Column(type="integer", name="reoccur_interval")
+     *
+     * @var int
+     */
+    protected $reoccurInterval = 0;
+
+    /**
      * @return int
      */
     public function getId()
@@ -134,5 +141,30 @@ class DaemonTask implements TaskInterface
         $this->disabled = true;
 
         return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isReoccurring()
+    {
+        return $this->reoccurInterval !== 0;
+    }
+
+    /**
+     * @return void
+     */
+    public function reoccur()
+    {
+        $this->dueAt += $this->reoccurInterval;
+    }
+
+    /**
+     * @param int $seconds
+     * @return TaskInterface
+     */
+    public function setReoccurInterval($seconds)
+    {
+        $this->reoccurInterval = $seconds;
     }
 }

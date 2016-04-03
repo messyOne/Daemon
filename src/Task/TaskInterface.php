@@ -19,7 +19,7 @@ interface TaskInterface
 
     /**
      * @param int $dueAt
-     * @return $this
+     * @return TaskInterface
      */
     public function setDueAt($dueAt);
 
@@ -30,7 +30,7 @@ interface TaskInterface
 
     /**
      * @param string $handlerClass Class which implements the TaskHandlerInterface
-     * @return $this
+     * @return TaskInterface
      */
     public function setHandlerClass($handlerClass);
 
@@ -41,7 +41,7 @@ interface TaskInterface
 
     /**
      * @param array $arguments
-     * @return $this
+     * @return TaskInterface
      */
     public function setArguments(array $arguments);
 
@@ -51,7 +51,23 @@ interface TaskInterface
     public function isDisabled();
 
     /**
-     * @return $this
+     * @return TaskInterface
      */
     public function setDisabled();
+
+    /**
+     * @param int $seconds
+     * @return TaskInterface
+     */
+    public function setReoccurInterval($seconds);
+
+    /**
+     * @return bool
+     */
+    public function isReoccurring();
+
+    /**
+     * @return TaskInterface
+     */
+    public function reoccur();
 }

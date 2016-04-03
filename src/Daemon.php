@@ -58,7 +58,12 @@ class Daemon
 
                     $handler->handle();
 
-                    $this->taskPersist->remove($task);
+                    if ($task->isReoccurring()) {
+                        $task->reoccur();
+                        $this->taskPersist->persist($task);
+                    } else {
+                        $this->taskPersist->remove($task);
+                    }
                 } catch (Exception $e) {
                     $this->logger->error("{$e->getMessage()}\n{$e->getTraceAsString()}");
 
