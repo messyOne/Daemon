@@ -47,6 +47,7 @@ class Daemon
         $this->logger->info("Status: starting up.");
 
         while (true) {
+            // TODO add transaction
             $tasks = $this->tasksFinder->findDueTasks();
             foreach ($tasks as $task) {
                 try {
