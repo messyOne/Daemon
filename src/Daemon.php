@@ -54,6 +54,8 @@ class Daemon
                     $handlerClass = $task->getHandlerClass();
                     /** @var TaskHandlerInterface $handler */
                     $handler = new $handlerClass(...$task->getArguments());
+                    
+                    $this->decorate($handler);
 
                     $this->logger->info("Handle {$handlerClass}");
 
@@ -76,5 +78,14 @@ class Daemon
 
             sleep(1);
         }
+    }
+
+    /**
+     * Hook to do additional things with the tasks e.g. setting further dependencies.
+     * 
+     * @param TaskHandlerInterface $handler
+     */
+    public function decorate(TaskHandlerInterface $handler)
+    {
     }
 }
