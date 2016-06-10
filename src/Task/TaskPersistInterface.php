@@ -20,7 +20,20 @@ interface TaskPersistInterface
     public function persist(TaskInterface $task);
 
     /**
+     * Starts with fetching due tasks. 
+     * 
+     * Good place for opening a transaction.
+     * 
      * @return void
      */
-    public function cleanUp();
+    public function begin();
+
+    /**
+     * Finish the handling of tasks. 
+     * 
+     * Clean if you have to. Close transaction etc.
+     * 
+     * @return void
+     */
+    public function commit();
 }

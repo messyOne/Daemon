@@ -22,11 +22,23 @@ class TaskPersist implements TaskPersistInterface
 
     /**
      * @inheritdoc
+     *
+     * @return void
      */
-    public function cleanUp()
+    public function begin()
+    {
+        $this->entityManager->beginTransaction();
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function commit()
     {
         $this->entityManager->flush();
         $this->entityManager->clear();
+
+        $this->entityManager->commit();
     }
 
     /**
